@@ -1,0 +1,839 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": [
+        "oi",
+        "olá",
+        "bom dia",
+        "boa tarde",
+        "boa noite",
+        "e aí",
+        "opa",
+        "hello",
+        "oi tudo bem",
+        "alô",
+        "oi pessoal",
+        "ei",
+        "tem alguém aí"
+      ],
+      "responses": [
+        "Olá{,nome}! Eu sou a {bot}, assistente virtual da {empresa}. Como posso ajudar?",
+        "Oi{,nome}! Em que posso ajudar hoje? Digite 'menu' para ver as opções."
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "tchau",
+        "até logo",
+        "até mais",
+        "falou",
+        "flw",
+        "tenho que ir",
+        "era só isso",
+        "por hoje é só",
+        "encerrar atendimento",
+        "até a próxima"
+      ],
+      "responses": [
+        "Até logo{,nome}! A {empresa} agradece o contato.",
+        "Tchau! Qualquer dúvida, é só chamar."
+      ]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": [
+        "obrigado",
+        "obrigada",
+        "valeu",
+        "muito obrigado",
+        "agradeço",
+        "obg",
+        "vlw",
+        "ajudou muito",
+        "era isso que eu precisava",
+        "gratidão"
+      ],
+      "responses": [
+        "De nada{,nome}! Fico feliz em ajudar.",
+        "Por nada! Se precisar de mais alguma coisa, é só chamar."
+      ]
+    },
+    {
+      "tag": "quem_e_voce",
+      "patterns": [
+        "quem é você",
+        "qual é o seu nome",
+        "como você se chama",
+        "você é um robô",
+        "você é humano",
+        "com quem estou falando",
+        "é um bot",
+        "se apresenta",
+        "é atendente ou robô"
+      ],
+      "responses": [
+        "Olá, me chamo Eva, sua IA! Sou a assistente virtual da {empresa}. Uno tecnologia e inteligência de dados para ajudar a otimizar ganhos, simplificar processos e levar o seu negócio a um novo patamar."
+      ]
+    },
+    {
+      "tag": "ajuda",
+      "patterns": [
+        "ajuda",
+        "preciso de ajuda",
+        "menu",
+        "opções",
+        "o que você faz",
+        "o que você sabe fazer",
+        "em que pode me ajudar",
+        "como funciona esse chat",
+        "tenho uma dúvida",
+        "pode me ajudar"
+      ],
+      "responses": [
+        "Posso ajudar com:\n• Conhecer a {empresa}, a Eva e as áreas de atuação\n• Soluções: {produtos}\n• Preços, demonstração e implantação\n• Criar conta ou entrar (sou cliente)\n• Abrir ou consultar chamados de suporte\n• Carreiras e informações institucionais\n• Falar com um atendente\n\nO que você precisa?"
+      ],
+      "sets_context": "ajuda"
+    },
+    {
+      "tag": "o_que_e_erp",
+      "patterns": [
+        "o que é um erp",
+        "o que é erp",
+        "para que serve um erp",
+        "pra que serve um sistema de gestão",
+        "o que é sistema de gestão empresarial",
+        "como um erp pode ajudar minha empresa",
+        "benefícios do erp",
+        "preciso de um erp",
+        "explica o que é erp"
+      ],
+      "responses": [
+        "ERP é um sistema de gestão empresarial que reúne em um só lugar áreas como financeiro, fiscal, estoque, vendas, RH e produção. Assim os dados ficam integrados, há menos retrabalho e a gestão ganha mais visibilidade. Quer conhecer nossos módulos?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "produtos",
+      "patterns": [
+        "quais sistemas vocês têm",
+        "quais produtos vocês oferecem",
+        "quais soluções vocês têm",
+        "quais módulos existem",
+        "módulos disponíveis",
+        "lista de produtos",
+        "o que vocês vendem",
+        "que tipo de software vocês fazem"
+      ],
+      "responses": [
+        "Na {empresa}, nossas soluções incluem: {produtos}. Quer que um consultor apresente a mais adequada para o seu negócio?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "financeiro",
+      "patterns": [
+        "módulo financeiro",
+        "contas a pagar e receber",
+        "fluxo de caixa",
+        "conciliação bancária",
+        "controle financeiro",
+        "contabilidade",
+        "sistema contábil",
+        "gestão financeira",
+        "tesouraria",
+        "boletos e cobrança"
+      ],
+      "responses": [
+        "O módulo financeiro cobre contas a pagar e receber, fluxo de caixa, conciliação bancária e integração com a contabilidade. Quer ver uma demonstração?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "fiscal",
+      "patterns": [
+        "nota fiscal eletrônica",
+        "emissão de nota fiscal",
+        "nf-e",
+        "nfe",
+        "módulo fiscal",
+        "sped",
+        "obrigações fiscais",
+        "impostos",
+        "reforma tributária",
+        "cálculo de impostos",
+        "nfs-e"
+      ],
+      "responses": [
+        "O módulo fiscal ajuda na emissão de notas fiscais eletrônicas, no cálculo de impostos e nas obrigações acessórias, como o SPED. Quer que um consultor explique em detalhes?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "estoque_compras",
+      "patterns": [
+        "controle de estoque",
+        "módulo de estoque",
+        "gestão de compras",
+        "cotação de fornecedores",
+        "pedido de compra",
+        "inventário",
+        "armazém",
+        "logística",
+        "suprimentos",
+        "almoxarifado",
+        "reposição de estoque"
+      ],
+      "responses": [
+        "Com os módulos de compras e estoque você controla cotações, pedidos, entradas e saídas, inventário e reposição. Quer ver como funciona na prática?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "vendas_crm",
+      "patterns": [
+        "módulo de vendas",
+        "gestão de vendas",
+        "crm",
+        "pedido de venda",
+        "gestão de clientes",
+        "funil de vendas",
+        "controle de pedidos",
+        "força de vendas",
+        "faturamento",
+        "comissão de vendedores"
+      ],
+      "responses": [
+        "O módulo de vendas e CRM organiza pedidos, relacionamento com clientes, faturamento e acompanhamento da equipe comercial. Quer agendar uma demonstração?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "rh_folha",
+      "patterns": [
+        "folha de pagamento",
+        "módulo de rh",
+        "gestão de pessoas",
+        "ponto eletrônico",
+        "controle de ponto",
+        "admissão de funcionários",
+        "férias",
+        "esocial",
+        "recursos humanos"
+      ],
+      "responses": [
+        "O módulo de RH e folha cobre admissão, ponto, férias, folha de pagamento e obrigações como o eSocial. Quer que um consultor entre em contato?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "producao",
+      "patterns": [
+        "planejamento de produção",
+        "pcp",
+        "módulo de produção",
+        "ordem de produção",
+        "gestão industrial",
+        "controle de produção",
+        "chão de fábrica",
+        "custos de produção",
+        "sistema para indústria",
+        "manufatura"
+      ],
+      "responses": [
+        "Para indústria, o módulo de produção (PCP) ajuda no planejamento, nas ordens de produção, no controle de insumos e no custo do produto. Quer conhecer melhor?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "bi_relatorios",
+      "patterns": [
+        "relatórios gerenciais",
+        "bi",
+        "dashboards",
+        "indicadores",
+        "painel de controle",
+        "business intelligence",
+        "relatórios personalizados",
+        "análise de dados",
+        "kpi"
+      ],
+      "responses": [
+        "Com BI e relatórios você acompanha indicadores e dashboards da empresa para decidir com base em dados. Quer saber mais?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "nuvem",
+      "patterns": [
+        "o sistema é na nuvem",
+        "cloud",
+        "versão na nuvem",
+        "on-premise",
+        "instalar no meu servidor",
+        "acesso remoto",
+        "funciona no celular",
+        "tem aplicativo",
+        "posso acessar de casa",
+        "servidor próprio",
+        "hospedagem"
+      ],
+      "responses": [
+        "Os formatos de implantação (na nuvem ou no seu próprio servidor) e o acesso por celular variam conforme o produto e o plano. Um consultor pode indicar a melhor opção para você."
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "integracao",
+      "patterns": [
+        "integração com outros sistemas",
+        "tem api",
+        "integrar com e-commerce",
+        "integração com marketplace",
+        "integra com banco",
+        "integrar com loja virtual",
+        "conectar com outro software",
+        "migrar dados do meu sistema atual",
+        "migração de dados"
+      ],
+      "responses": [
+        "Integrações com e-commerce, bancos e outros sistemas, além de migração de dados, dependem do produto e do seu cenário. Quer que um consultor avalie o seu caso?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "precos",
+      "patterns": [
+        "quanto custa",
+        "qual o preço",
+        "valores",
+        "quais os planos",
+        "orçamento",
+        "quero um orçamento",
+        "tabela de preços",
+        "preço da licença",
+        "mensalidade",
+        "quanto é o investimento",
+        "planos e preços",
+        "cotação"
+      ],
+      "responses": [
+        "Os valores dependem dos módulos, do número de usuários e do tipo de implantação, então eu não consigo informar um preço fechado por aqui. Posso pedir para um consultor montar um orçamento. Quer?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "demonstracao",
+      "patterns": [
+        "quero uma demonstração",
+        "agendar demonstração",
+        "solicitar demo",
+        "quero testar o sistema",
+        "teste grátis",
+        "posso testar",
+        "ver o sistema funcionando",
+        "agendar uma apresentação",
+        "quero conhecer o sistema",
+        "apresentação do produto"
+      ],
+      "responses": [
+        "Claro!"
+      ],
+      "action": "lead"
+    },
+    {
+      "tag": "contato_comercial",
+      "patterns": [
+        "falar com um consultor",
+        "falar com vendedor",
+        "quero contratar",
+        "quero comprar",
+        "time comercial",
+        "quero ser cliente",
+        "gostaria de contratar o sistema",
+        "entrar em contato com vendas",
+        "consultor comercial",
+        "fechar contrato",
+        "entre em contato",
+        "quero entrar em contato"
+      ],
+      "responses": [
+        "Claro!"
+      ],
+      "action": "lead"
+    },
+    {
+      "tag": "implantacao",
+      "patterns": [
+        "como funciona a implantação",
+        "quanto tempo leva para implantar",
+        "prazo de implantação",
+        "como é a implantação",
+        "processo de implementação",
+        "vocês fazem a implantação",
+        "tempo de implementação",
+        "como começar a usar",
+        "consultoria de implantação"
+      ],
+      "responses": [
+        "A implantação costuma ter etapas de levantamento, configuração, migração de dados, treinamento e acompanhamento. O prazo depende do tamanho da empresa e dos módulos. Quer que um consultor avalie o seu caso?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "treinamento",
+      "patterns": [
+        "tem treinamento",
+        "treinamento para equipe",
+        "curso do sistema",
+        "como aprender a usar",
+        "capacitação",
+        "manual do sistema",
+        "tutorial",
+        "videoaulas",
+        "documentação",
+        "base de conhecimento",
+        "como usar o sistema"
+      ],
+      "responses": [
+        "Para manuais, tutoriais e materiais de treinamento, consulte o portal: {portal}. Se precisar de treinamento para a sua equipe, um consultor pode orientar. Se preferir falar com uma pessoa, é só digitar 'atendente'."
+      ]
+    },
+    {
+      "tag": "suporte",
+      "patterns": [
+        "abrir chamado",
+        "quero abrir um chamado",
+        "preciso de suporte",
+        "suporte técnico",
+        "o sistema está com erro",
+        "deu erro no sistema",
+        "sistema travou",
+        "sistema fora do ar",
+        "está dando erro",
+        "não consigo emitir nota",
+        "problema no sistema",
+        "bug",
+        "o sistema está lento",
+        "tenho um problema",
+        "reportar problema",
+        "sistema parado",
+        "abrir ticket"
+      ],
+      "responses": [
+        "Claro!"
+      ],
+      "action": "ticket"
+    },
+    {
+      "tag": "consultar_chamado",
+      "patterns": [
+        "consultar chamado",
+        "status do chamado",
+        "como está meu chamado",
+        "andamento do chamado",
+        "número do protocolo",
+        "protocolo",
+        "acompanhar chamado",
+        "meu chamado foi resolvido",
+        "verificar protocolo",
+        "status do meu ticket",
+        "tenho um protocolo"
+      ],
+      "responses": [
+        "Claro!"
+      ],
+      "action": "ticket_status"
+    },
+    {
+      "tag": "acesso",
+      "patterns": [
+        "esqueci minha senha",
+        "esqueci a senha",
+        "resetar senha",
+        "redefinir senha",
+        "não consigo acessar",
+        "não consigo entrar no sistema",
+        "acesso bloqueado",
+        "usuário bloqueado",
+        "trocar senha",
+        "recuperar acesso",
+        "não consigo fazer login",
+        "login não funciona"
+      ],
+      "responses": [
+        "Para recuperar o acesso, use a opção 'Esqueci minha senha' na tela de login. Se o usuário estiver bloqueado ou o problema continuar, digite 'abrir chamado' que eu registro para o suporte."
+      ]
+    },
+    {
+      "tag": "atualizacao",
+      "patterns": [
+        "atualização do sistema",
+        "nova versão",
+        "como atualizar",
+        "release",
+        "atualizar versão",
+        "novidades da versão",
+        "patch de correção",
+        "atualização de legislação",
+        "preciso atualizar",
+        "versão desatualizada"
+      ],
+      "responses": [
+        "Informações sobre novas versões, atualizações e mudanças de legislação ficam no portal: {portal}. Se tiver dúvida ou erro ao atualizar, digite 'abrir chamado'."
+      ]
+    },
+    {
+      "tag": "seguranca",
+      "patterns": [
+        "lgpd",
+        "segurança dos dados",
+        "meus dados estão seguros",
+        "backup",
+        "proteção de dados",
+        "criptografia",
+        "perfis de usuário",
+        "auditoria",
+        "onde ficam meus dados"
+      ],
+      "responses": [
+        "Para informações oficiais sobre segurança, backup e LGPD, consulte a documentação e a política de privacidade em {portal}, ou fale com um consultor. Quer o contato de um atendente?"
+      ],
+      "sets_context": "oferta_atendente"
+    },
+    {
+      "tag": "horario",
+      "patterns": [
+        "qual o horário de atendimento",
+        "horário de funcionamento",
+        "vocês atendem aos sábados",
+        "atendem hoje",
+        "estão abertos",
+        "que horas abrem",
+        "que horas fecham",
+        "atendem no domingo",
+        "atendem agora",
+        "horário do suporte",
+        "atende feriado"
+      ],
+      "responses": [
+        "Nosso atendimento é de {horario}. {status_horario}"
+      ]
+    },
+    {
+      "tag": "falar_atendente",
+      "patterns": [
+        "falar com um atendente",
+        "quero falar com uma pessoa",
+        "atendente humano",
+        "falar com humano",
+        "transferir para atendente",
+        "telefone de contato",
+        "qual o telefone",
+        "qual o e-mail de contato",
+        "quero ligar",
+        "atendimento humano",
+        "contato de vocês",
+        "atendente"
+      ],
+      "responses": [
+        "Você pode falar com um atendente pelo telefone {telefone} ou pelo e-mail {email}. Nosso atendimento é de {horario}. {status_horario}"
+      ]
+    },
+    {
+      "tag": "financeiro_cliente",
+      "patterns": [
+        "segunda via de boleto",
+        "2ª via do boleto",
+        "boleto da mensalidade",
+        "fatura do sistema",
+        "nota fiscal da minha mensalidade",
+        "cancelar contrato",
+        "cancelamento",
+        "alterar plano",
+        "upgrade de plano",
+        "dúvida sobre cobrança",
+        "cobrança indevida",
+        "renovar contrato"
+      ],
+      "responses": [
+        "Assuntos de contrato, cobrança e cancelamento são tratados por um atendente, para garantir a segurança dos seus dados. Quer o contato?"
+      ],
+      "sets_context": "oferta_atendente"
+    },
+    {
+      "tag": "reclamacao",
+      "patterns": [
+        "péssimo atendimento",
+        "estou insatisfeito",
+        "isso é um absurdo",
+        "não resolveram meu problema",
+        "estou muito irritado",
+        "reclamação",
+        "quero reclamar",
+        "demora no atendimento",
+        "ninguém me responde",
+        "você não ajuda",
+        "resposta errada",
+        "não é isso que perguntei"
+      ],
+      "responses": [
+        "Sinto muito pelo transtorno{,nome}. Quer que eu passe o contato de um atendente para resolver isso?"
+      ],
+      "sets_context": "oferta_atendente"
+    },
+    {
+      "tag": "elogio",
+      "patterns": [
+        "você é ótima",
+        "parabéns pelo atendimento",
+        "atendimento excelente",
+        "muito bom",
+        "gostei do atendimento",
+        "vocês são ótimos",
+        "adorei",
+        "show"
+      ],
+      "responses": [
+        "Muito obrigada{,nome}! Fico feliz em ajudar."
+      ]
+    },
+    {
+      "tag": "confirmacao",
+      "patterns": [
+        "sim",
+        "quero",
+        "quero sim",
+        "pode ser",
+        "pode",
+        "claro",
+        "com certeza",
+        "por favor",
+        "ok",
+        "beleza",
+        "tá bom",
+        "manda",
+        "aceito",
+        "vamos"
+      ],
+      "responses": [
+        "Ótimo! Me diga o que você precisa ou digite 'menu' para ver as opções."
+      ],
+      "context_filter": [
+        "ajuda",
+        "oferta_atendente",
+        "oferta_demo"
+      ],
+      "action": "confirm"
+    },
+    {
+      "tag": "negacao",
+      "patterns": [
+        "não",
+        "nao",
+        "não quero",
+        "agora não",
+        "deixa pra lá",
+        "não precisa",
+        "melhor não",
+        "por enquanto não",
+        "depois",
+        "sem problemas"
+      ],
+      "responses": [
+        "Tudo bem! Se precisar, é só chamar."
+      ],
+      "context_filter": [
+        "ajuda",
+        "oferta_atendente",
+        "oferta_demo"
+      ],
+      "action": "deny"
+    },
+    {
+      "tag": "eva_ia",
+      "patterns": [
+        "conhecer a eva",
+        "o que a eva faz",
+        "o que é a eva",
+        "como a eva pode ajudar",
+        "vocês usam ia",
+        "inteligência artificial",
+        "automação inteligente",
+        "análise preditiva",
+        "diagnóstico de dados",
+        "insights acionáveis",
+        "reduzir desperdícios",
+        "expansão do negócio",
+        "desenvolvimento estratégico",
+        "otimização e ganhos"
+      ],
+      "responses": [
+        "Eu sou a Eva, a IA da {empresa}. Atuo em três frentes:\n• Desenvolvimento estratégico: analiso o cenário da sua empresa e aponto rotas de expansão e oportunidades de mercado.\n• Otimização e ganhos: uso modelos preditivos e análise financeira para encontrar gargalos e reduzir desperdícios.\n• Tecnologia e inteligência de dados: processo grandes volumes de dados em tempo real e entrego diagnósticos, automações e insights.\n\nQuer ver isso na prática?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "sobre_empresa",
+      "patterns": [
+        "quem é a integra",
+        "sobre a empresa",
+        "história da empresa",
+        "quem são vocês",
+        "qual a missão",
+        "o que a empresa faz",
+        "conte sobre a empresa",
+        "nossa história",
+        "informações sobre a empresa",
+        "resumo da empresa"
+      ],
+      "responses": [
+        "A {empresa} é uma empresa focada em inovação, tecnologia e soluções para seus clientes. Com uma equipe dedicada, cria projetos eficientes e modernos que ajudam a transformar ideias em resultados, conectando pessoas, tecnologia e conhecimento. A história completa está na página 'Sobre' do site: {portal}"
+      ]
+    },
+    {
+      "tag": "segmentos",
+      "patterns": [
+        "áreas de atuação",
+        "quais segmentos vocês atendem",
+        "segmentos de atuação",
+        "atendem indústria",
+        "atendem varejo",
+        "construção civil",
+        "agronegócio",
+        "saúde",
+        "educação",
+        "energia e utilities",
+        "alimentos e bebidas",
+        "atendem meu setor",
+        "para quais setores"
+      ],
+      "responses": [
+        "Atuamos nas áreas: {segmentos}. Quer que um consultor mostre como a {empresa} se aplica ao seu segmento?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "grandes_empresas",
+      "patterns": [
+        "atendimento para grandes empresas",
+        "grandes empresas",
+        "solução corporativa",
+        "atendimento exclusivo",
+        "sou uma multinacional",
+        "empresa de grande porte",
+        "enterprise"
+      ],
+      "responses": [
+        "Para grandes empresas, a {empresa} oferece atendimento exclusivo. Posso registrar seu contato para um consultor especializado. Quer?"
+      ],
+      "sets_context": "oferta_demo"
+    },
+    {
+      "tag": "encontre_integra",
+      "patterns": [
+        "onde fica a empresa",
+        "endereço",
+        "unidades",
+        "escritório",
+        "encontre a integra",
+        "unidade mais próxima",
+        "localidades mundiais",
+        "onde vocês estão",
+        "quero visitar vocês",
+        "encontrar a integra"
+      ],
+      "responses": [
+        "Para encontrar a {empresa} mais perto de você, use a opção 'Encontre a {empresa}' no site ({portal}) ou fale com um atendente pelo telefone {telefone}."
+      ]
+    },
+    {
+      "tag": "carreiras",
+      "patterns": [
+        "trabalhe conosco",
+        "vagas",
+        "carreiras",
+        "quero trabalhar na empresa",
+        "enviar currículo",
+        "processo seletivo",
+        "estágio",
+        "oportunidades de emprego",
+        "tem vaga aberta"
+      ],
+      "responses": [
+        "Quer fazer parte do time? Veja as oportunidades em 'Trabalhe conosco' no site: {portal}"
+      ]
+    },
+    {
+      "tag": "investidores",
+      "patterns": [
+        "relações com investidores",
+        "relatório integrado",
+        "informações para acionistas",
+        "governança",
+        "quero investir",
+        "resultados da empresa"
+      ],
+      "responses": [
+        "As informações de relações com investidores e o relatório integrado da {empresa} ficam no site: {portal}. Quer o contato de um atendente?"
+      ],
+      "sets_context": "oferta_atendente"
+    },
+    {
+      "tag": "blog_noticias",
+      "patterns": [
+        "blog",
+        "notícias da empresa",
+        "eventos",
+        "newsletter",
+        "histórias",
+        "sala de imprensa",
+        "novidades da empresa",
+        "assessoria de imprensa"
+      ],
+      "responses": [
+        "Notícias, eventos, blog e newsletter da {empresa} ficam no rodapé do site: {portal}"
+      ]
+    },
+    {
+      "tag": "login_conta",
+      "patterns": [
+        "como criar conta",
+        "criar uma conta",
+        "cadastro",
+        "registrar-se",
+        "como faço login",
+        "sou cliente",
+        "entrar com google",
+        "entrar com linkedin",
+        "login com e-mail corporativo",
+        "área do cliente",
+        "não recebi o e-mail de verificação",
+        "verificar e-mail",
+        "crie sua conta"
+      ],
+      "responses": [
+        "Para criar sua conta ou entrar:\n1. Registrar-se com seu e-mail corporativo (ou continue com Google ou LinkedIn), informando nome, empresa e departamento\n2. Verificar o e-mail que você receber\n3. Acessar os recursos\n\nSe o e-mail de verificação não chegar, confira o spam ou digite 'abrir chamado'."
+      ]
+    },
+    {
+      "tag": "privacidade_termos",
+      "patterns": [
+        "política de privacidade",
+        "termos de uso",
+        "declaração de privacidade",
+        "política de cookies",
+        "preferências de cookies",
+        "confidencialidade",
+        "direitos autorais",
+        "marca registrada",
+        "privacidade"
+      ],
+      "responses": [
+        "Privacidade, termos de uso, confidencialidade, direitos autorais, marca registrada e a declaração sobre cookies ficam no rodapé do site: {portal}. Para dúvidas sobre seus dados, posso passar o contato de um atendente."
+      ],
+      "sets_context": "oferta_atendente"
+    }
+  ]
+}

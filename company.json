@@ -1,0 +1,51 @@
+{
+  "empresa": "Integra",
+  "bot_name": "Eva",
+  "telefone": "(00) 0000-0000",
+  "email": "suporte@integra.com.br",
+  "portal": "https://www.seusite.com.br",
+  "produtos": [
+    "Gestão financeira",
+    "Controle de estoque",
+    "Vendas",
+    "Processos administrativos",
+    "Inteligência artificial e dados"
+  ],
+  "horario_texto": "segunda a sexta, das 8h às 18h",
+  "horario": {
+    "dias": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "inicio": "08:00",
+    "fim": "18:00"
+  },
+  "fuso": "America/Sao_Paulo",
+  "prazo_comercial": "1 dia útil",
+  "prazo_suporte": "o prazo previsto no seu contrato de suporte",
+  "segmentos": [
+    "Construção Civil",
+    "Indústria",
+    "Varejo",
+    "Serviços",
+    "Saúde",
+    "Agronegócio",
+    "Educação",
+    "Finanças",
+    "Logística",
+    "Energia e Utilities",
+    "Alimentos e Bebidas"
+  ],
+  "saudacao_inicial": "Estou aqui para impulsionar o crescimento do seu negócio. Unindo tecnologia e inteligência de dados, ajudo a {empresa} e seus clientes a otimizar ganhos e simplificar processos. Como posso ajudar?",
+  "atalhos": [
+    "Conhecer a Eva",
+    "Áreas de atuação",
+    "Quero uma demonstração",
+    "Abrir chamado",
+    "Sou cliente",
+    "Trabalhe conosco"
+  ]
+}

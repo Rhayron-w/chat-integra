@@ -1,0 +1,9 @@
+torch
+nltk
+numpy
+tzdata
+anthropic
+streamlit
+flask
+flask-cors
+python-telegram-bot>=20
