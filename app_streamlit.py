@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""Interface web.  Uso: python -m streamlit run app_streamlit.py"""
+
 import uuid
 
 import streamlit as st
