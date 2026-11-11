@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-"""API para o chat do site.  Uso: python api_server.py  (abre em http://127.0.0.1:5000)"""
+
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
