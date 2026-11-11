@@ -8,15 +8,12 @@ coleta leads comerciais, abre e consulta chamados de suporte e encaminha para at
 - `intents.json` – intenções, frases de exemplo e respostas (33 intenções)
 - `train.py` – treina o modelo (`data.pth`). Rode de novo sempre que mudar o `intents.json`
 - `chatbot.py` – núcleo: classificação, memória, fluxos, banco SQLite e fallback com IA
-- `cli.py` – teste no terminal · `app_streamlit.py` – interface web de teste
 - `api_server.py` + `widget.html` – API Flask e widget de chat para o site
-- `telegram_bot.py` – canal opcional no Telegram
 
 ## Como usar
 ```
 python -m pip install -r requirements.txt
 python train.py
-python cli.py                          # terminal
 python -m streamlit run app_streamlit.py
 python api_server.py                   # abre http://127.0.0.1:5000 com o widget
 ```
