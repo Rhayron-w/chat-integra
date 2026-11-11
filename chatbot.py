@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Núcleo do chatbot de atendimento de ERP: intenções, memória, fluxos
 (lead comercial, abertura/consulta de chamado), histórico e fallback com IA."""
 import json
